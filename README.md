@@ -74,9 +74,9 @@ Or create a JSON config and run directly:
 
 ```
 
-python tga_analyze.py my\_config.json
-python tga_analyze.py my\_config.json --output results/
-python tga_analyze.py my\_config.json --no-plots
+python tga_analyze.py my_config.json
+python tga_analyze.py my_config.json --output results/
+python tga_analyze.py my_config.json --no-plots
 
 ```
 
@@ -291,8 +291,8 @@ For each analysis run, the tool produces:
 | `{case_id}_report.txt`      | Human-readable report with suggested publication wording      |
 | `{case_id}_tga_dtg.png`     | TGA + DTG overlay plot                                        |
 | `{case_id}_events.png`      | Color-coded mass-loss event map                               |
-| `{case_id}_rexp.png`        | R\_exp(T) curve with plateau annotation (if formula provided) |
-| `{case_id}_sensitivity.png` | q vs T\_DH sensitivity plot (if formula provided)             |
+| `{case_id}_rexp.png`        | R_exp(T) curve with plateau annotation (if formula provided) |
+| `{case_id}_sensitivity.png` | q vs T_DH sensitivity plot (if formula provided)             |
 
 ***
 
@@ -415,9 +415,9 @@ All math lives here. No file I/O except reading the TGA CSV. No plotting. No use
 
 **`dtg.py`** — Computes the DTG curve and detects mass-loss events. `compute_dtg` uses `scipy.signal.savgol_filter` with `deriv=1` for simultaneous smoothing and differentiation. The Savitzky-Golay window auto-scales from data density and heating rate. Does not clip negative values (preserves mass-gain information). `detect_events` finds DTG peaks via `scipy.signal.find_peaks` with prominence threshold, then finds valleys (DTG minima) between adjacent peaks. Events span valley-to-valley: first event starts at data start, last event ends at data end. This guarantees that the sum of all event losses plus the residue equals 100.00%. Small events below `min_mass_loss` are merged into adjacent events. Initial artifacts are flagged but not removed.
 
-**`rexp.py`** — Implements the R\_exp composition method from Abánades Lázaro (2020). `compute_rexp` calculates R\_exp(T) = m(T)/m\_residue at every temperature. `find_dh_plateau` slides a window across R\_exp(T) and picks the flattest region (minimum std of dR/dT). `compute_linkers` solves q = (R\_exp\_DH × M\_residue − M\_node) / M\_linker. Also provides `compute_formula_mass`, `compute_theoretical_rexp`, and `compute_linkers_with_modulator` for extended calculations.
+**`rexp.py`** — Implements the R_exp composition method from Abánades Lázaro (2020). `compute_rexp` calculates R_exp(T) = m(T)/m_residue at every temperature. `find_dh_plateau` slides a window across R_exp(T) and picks the flattest region (minimum std of dR/dT). `compute_linkers` solves q = (R_exp_DH × M_residue − M_node) / M_linker. Also provides `compute_formula_mass`, `compute_theoretical_rexp`, and `compute_linkers_with_modulator` for extended calculations.
 
-**`guest_solver.py`** — Enumerates all stoichiometric guest combinations that reproduce an observed mass loss within tolerance. Uses brute-force grid search over coefficients (step 0.5, max 10 per guest, max 4 guests simultaneously). The key equation: f\_calc = Σ(n\_i × MW\_i) / (M\_F + Σ(n\_i × MW\_i)), where the denominator is total mass (framework + guests), not just framework mass. Surviving combinations are ranked by a penalty function: mass error + pore volume violation + boiling point violation. Contains `COMMON_GUESTS` (list of `GuestCandidate` objects) and `GUEST_LIBRARY` (dict with formula, MW, boiling point, name for 15 solvents). Also contains `score_guest_assignment` which scores assignments by: 10×|error| + 0.03×Σn (Occam) + 2.0 per species beyond 3 + 3.0 per bp mismatch + 1.0 per high-count guest.
+**`guest_solver.py`** — Enumerates all stoichiometric guest combinations that reproduce an observed mass loss within tolerance. Uses brute-force grid search over coefficients (step 0.5, max 10 per guest, max 4 guests simultaneously). The key equation: f_calc = Σ(n_i × MW_i) / (M_F + Σ(n_i × MW_i)), where the denominator is total mass (framework + guests), not just framework mass. Surviving combinations are ranked by a penalty function: mass error + pore volume violation + boiling point violation. Contains `COMMON_GUESTS` (list of `GuestCandidate` objects) and `GUEST_LIBRARY` (dict with formula, MW, boiling point, name for 15 solvents). Also contains `score_guest_assignment` which scores assignments by: 10×|error| + 0.03×Σn (Occam) + 2.0 per species beyond 3 + 3.0 per bp mismatch + 1.0 per high-count guest.
 
 **`charge_balance.py`** — Checks if a MOF formula is charge-balanced. Computes positive charge (from SBU), negative charge (from linkers × charge), and residual. Reports balanced if |residual| < 0.5. Also computes how many compensating ions are needed to balance a defective formula.
 
@@ -425,11 +425,11 @@ All math lives here. No file I/O except reading the TGA CSV. No plotting. No use
 
 **`residue_analysis.py`** — Compares observed TGA residue to predicted oxide residue. Computes Δ = observed − predicted. Interprets the difference: |Δ|<2pp = excellent match; Δ<0 = excess organic (guests or defects); Δ>0 = inorganic impurity. Includes atmosphere-dependent warnings (inert atmosphere makes oxide prediction unreliable).
 
-**`uncertainty.py`** — Analytical (linear) uncertainty propagation following JCGM 100:2008 (GUM). Three functions: `guest_count_uncertainty` (σ for n guests/FU), `composition_uncertainty` (σ for q linkers/FU), `composite_loading_uncertainty` (σ for w\_MOF). Each computes partial derivatives and combines via σ² = Σ(∂f/∂xi)²σ\_xi². Also provides `sigma_from_quality` which extracts σ\_mass and σ\_residue from a `QualityReport`. The `UncertainValue` dataclass holds value ± σ with unit string and relative percentage.
+**`uncertainty.py`** — Analytical (linear) uncertainty propagation following JCGM 100:2008 (GUM). Three functions: `guest_count_uncertainty` (σ for n guests/FU), `composition_uncertainty` (σ for q linkers/FU), `composite_loading_uncertainty` (σ for w_MOF). Each computes partial derivatives and combines via σ² = Σ(∂f/∂xi)²σ_xi². Also provides `sigma_from_quality` which extracts σ_mass and σ_residue from a `QualityReport`. The `UncertainValue` dataclass holds value ± σ with unit string and relative percentage.
 
-**`validator.py`** — Checks all inputs before computation. Returns `ValidationResult` with lists of errors and warnings, never Python tracebacks. Checks: file exists, window\_start < window\_end, window doesn't cross decomp\_start, formula parseable, guests known, atmosphere specified, observed mass reasonable, heating rate positive and not extreme, numeric fields non-negative.
+**`validator.py`** — Checks all inputs before computation. Returns `ValidationResult` with lists of errors and warnings, never Python tracebacks. Checks: file exists, window_start < window_end, window doesn't cross decomp_start, formula parseable, guests known, atmosphere specified, observed mass reasonable, heating rate positive and not extreme, numeric fields non-negative.
 
-**`json_runner.py`** — Reads a JSON config file, validates it, routes to appropriate modules, and returns structured JSON output. Supports single run or batch (`"runs"` array). Calls: validator → tga\_parser → tga\_quality → Module 1 → Module 2 → residue analysis.
+**`json_runner.py`** — Reads a JSON config file, validates it, routes to appropriate modules, and returns structured JSON output. Supports single run or batch (`"runs"` array). Calls: validator → tga_parser → tga_quality → Module 1 → Module 2 → residue analysis.
 
 **`report.py`** — Generates output files. `save_report_json` writes results as JSON with numpy serialization (converts ndarray to list, nan to null). `generate_methods_wording` produces a suggested methods paragraph for publications. `generate_results_wording` produces a suggested results paragraph. `generate_full_report_text` combines all sections into a complete human-readable report.
 
@@ -439,15 +439,15 @@ Each module answers one specific question. Each depends on `core/` for computati
 
 **`__init__.py`** — Empty.
 
-**`m1_thermal_stability.py`** — "At what temperature does my MOF decompose?" Calls `compute_dtg` and `detect_events`. Identifies the decomposition event (largest DTG peak above 250°C). Computes T\_onset by tangent intersection (line through DTG peak projected to baseline mass). Computes T\_onset by threshold method (first T where DTG exceeds a dynamic threshold). Computes T\_DTG\_max (temperature of maximum DTG in decomposition region). Computes T\_x metrics (T\_1, T\_2, T\_5, T\_10) by linear interpolation from activated mass. Computes stability window (end of activation to start of decomposition). Returns `StabilityResult`.
+**`m1_thermal_stability.py`** — "At what temperature does my MOF decompose?" Calls `compute_dtg` and `detect_events`. Identifies the decomposition event (largest DTG peak above 250°C). Computes T_onset by tangent intersection (line through DTG peak projected to baseline mass). Computes T_onset by threshold method (first T where DTG exceeds a dynamic threshold). Computes T_DTG_max (temperature of maximum DTG in decomposition region). Computes T_x metrics (T_1, T_2, T_5, T_10) by linear interpolation from activated mass. Computes stability window (end of activation to start of decomposition). Returns `StabilityResult`.
 
-**`m2_guest_content.py`** — "How much guest/solvent is in my MOF?" Two modes. Event-based mode (`analyze_guest_content`) uses detected events. Window-based mode (`analyze_guest_content_windows`) uses user-specified or default temperature windows: RT–120°C, 120–250°C, 250–400°C, 400–600°C, 600°C–end. For each window, loss = m(T\_start) − m(T\_end) via linear interpolation. Sum of all windows + residue = 100%. Returns `GuestContentResult`.
+**`m2_guest_content.py`** — "How much guest/solvent is in my MOF?" Two modes. Event-based mode (`analyze_guest_content`) uses detected events. Window-based mode (`analyze_guest_content_windows`) uses user-specified or default temperature windows: RT–120°C, 120–250°C, 250–400°C, 400–600°C, 600°C–end. For each window, loss = m(T_start) − m(T_end) via linear interpolation. Sum of all windows + residue = 100%. Returns `GuestContentResult`.
 
-**`m3_composition.py`** — "What is the molecular formula of my MOF?" Takes `TGAData`, `MOFComponents` (M\_node, M\_linker, M\_residue, q\_ideal), and a user-specified T\_DH. Interpolates mass at T\_DH. Computes R\_exp\_DH = m(T\_DH) / m\_residue. Computes q = (R\_exp\_DH × M\_residue − M\_node) / M\_linker. Checks charge balance. Generates formula string. Warns if q > ideal, charge imbalanced, or compensator count negative. Returns `CompositionResult`.
+**`m3_composition.py`** — "What is the molecular formula of my MOF?" Takes `TGAData`, `MOFComponents` (M_node, M_linker, M_residue, q_ideal), and a user-specified T_DH. Interpolates mass at T_DH. Computes R_exp_DH = m(T_DH) / m_residue. Computes q = (R_exp_DH × M_residue − M_node) / M_linker. Checks charge balance. Generates formula string. Warns if q > ideal, charge imbalanced, or compensator count negative. Returns `CompositionResult`.
 
-**`m4_defect_quantification.py`** — "How many linkers are missing?" Takes `CompositionResult` from Module 3. Simple estimate: x = q\_ideal − q\_experimental. Then iterates over 5 compensator models (vacancy, OH/H2O, formate, acetate, chloride), solving x = (M\_ideal − M\_obs) / (M\_linker − n\_cap × M\_cap) for each. Checks charge balance for each model. Reports coordination number. Warns that TGA cannot distinguish missing-linker from missing-cluster defects. Returns `DefectResult`.
+**`m4_defect_quantification.py`** — "How many linkers are missing?" Takes `CompositionResult` from Module 3. Simple estimate: x = q_ideal − q_experimental. Then iterates over 5 compensator models (vacancy, OH/H2O, formate, acetate, chloride), solving x = (M_ideal − M_obs) / (M_linker − n_cap × M_cap) for each. Checks charge balance for each model. Reports coordination number. Warns that TGA cannot distinguish missing-linker from missing-cluster defects. Returns `DefectResult`.
 
-**`m5_composite_loading.py`** — "What fraction of my composite is MOF?" Takes composite TGA data plus reference residue fractions for pure MOF and pure additive. Computes r\_composite from composite TGA residue. Applies w\_MOF = (r\_composite − r\_additive) / (r\_MOF − r\_additive). Warns if r\_MOF ≈ r\_additive (denominator → 0, method unreliable). Warns if w\_MOF outside 0–100%. Returns `CompositeResult`.
+**`m5_composite_loading.py`** — "What fraction of my composite is MOF?" Takes composite TGA data plus reference residue fractions for pure MOF and pure additive. Computes r_composite from composite TGA residue. Applies w_MOF = (r_composite − r_additive) / (r_MOF − r_additive). Warns if r_MOF ≈ r_additive (denominator → 0, method unreliable). Warns if w_MOF outside 0–100%. Returns `CompositeResult`.
 
 ### `viz/` — Visualization
 
@@ -459,9 +459,9 @@ Each module answers one specific question. Each depends on `core/` for computati
 
 2. `plot_event_map(tga, events, save_path)` — TGA curve with each event filled in a different color (Set3 colormap). Legend shows event number and mass loss. Up to 12 events labeled.
 
-3. `plot_rexp_curve(tga, rexp, save_path)` — Upper panel: R\_exp(T) with horizontal line at plateau value and vertical line at suggested T\_DH. Lower panel: dR/dT showing where the plateau is flattest.
+3. `plot_rexp_curve(tga, rexp, save_path)` — Upper panel: R_exp(T) with horizontal line at plateau value and vertical line at suggested T_DH. Lower panel: dR/dT showing where the plateau is flattest.
 
-4. `plot_composition_sensitivity(sweep_data, save_path)` — q vs T\_DH curve. Horizontal line at q\_ideal. Shaded region for "plausible" range (|deficiency| < 15%). Equation annotation. Arrow at auto-plateau suggestion.
+4. `plot_composition_sensitivity(sweep_data, save_path)` — q vs T_DH curve. Horizontal line at q_ideal. Shaded region for "plausible" range (|deficiency| < 15%). Equation annotation. Arrow at auto-plateau suggestion.
 
 5. `plot_composite_series(data, save_path)` — Stacked bar chart showing MOF% and additive% for a series of samples. Equation annotation.
 
@@ -471,7 +471,7 @@ Each module answers one specific question. Each depends on `core/` for computati
 
 **`test_A_happy_path.py`** — 22 tests. Normal operation. Tests formula parsing (H2O, ZrO2, NH2BDC, UiO-66-NH2, aliases, fractional subscripts, nested parentheses, invalid element raises ValueError). Tests residue prediction (42.15% for UiO-66-NH2, oxide formula, inert atmosphere warning, no-metals raises error). Tests uncertainty (positive σ for guests, composition, composites; zero denominator handling). Tests validation (valid config passes, missing CSV fails, reversed window fails, invalid formula fails, window crossing decomp warns).
 
-**`test_B_edge_cases.py`** — 6 tests. Incomplete inputs. Tests: unknown atmosphere → warning not error; missing heating rate → info not error; no observed\_final\_mass → info not error; no formula → valid (skip M3/M4); negative heating rate → error; very high heating rate → warning.
+**`test_B_edge_cases.py`** — 6 tests. Incomplete inputs. Tests: unknown atmosphere → warning not error; missing heating rate → info not error; no observed_final_mass → info not error; no formula → valid (skip M3/M4); negative heating rate → error; very high heating rate → warning.
 
 **`test_C_expected_failures.py`** — 7 tests. Invalid inputs that must be rejected. Tests: reversed window → error; unknown guest → error; invalid formula → error; missing CSV → error; strongly negative residue → error; invalid element in formula → ValueError; unmatched parenthesis → ValueError.
 
