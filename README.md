@@ -64,7 +64,7 @@ Deployed version: https://tga-mof-analyzer.streamlit.app
 
 ```
 
-python tga\_analyze.py --wizard
+python tga_analyze.py --wizard
 
 ```
 
@@ -74,9 +74,9 @@ Or create a JSON config and run directly:
 
 ```
 
-python tga\_analyze.py my\_config.json
-python tga\_analyze.py my\_config.json --output results/
-python tga\_analyze.py my\_config.json --no-plots
+python tga_analyze.py my\_config.json
+python tga_analyze.py my\_config.json --output results/
+python tga_analyze.py my\_config.json --no-plots
 
 ```
 
@@ -84,7 +84,7 @@ Generate a config template:
 
 ```
 
-python tga\_analyze.py --example-simple > config.json
+python tga_analyze.py --example-simple > config.json
 
 ````
 
