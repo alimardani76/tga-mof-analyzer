@@ -1,0 +1,102 @@
+﻿{
+    "formic_acid": {
+        "formula_acid": "HCO2H",
+        "formula_anion": "HCO2⁻",
+        "MW_acid": 46.025,
+        "MW_anion": 45.017,
+        "charge": -1,
+        "bp_C": 100.8,
+        "full_name": "formic acid / formate",
+        "atoms_anion": {
+            "C": 1,
+            "H": 1,
+            "O": 2
+        },
+        "notes": "Most common modulator for UiO-66. Low bp — mostly removed by 300°C."
+    },
+    "acetic_acid": {
+        "formula_acid": "CH3CO2H",
+        "formula_anion": "CH3CO2⁻",
+        "MW_acid": 60.052,
+        "MW_anion": 59.044,
+        "charge": -1,
+        "bp_C": 117.9,
+        "full_name": "acetic acid / acetate",
+        "atoms_anion": {
+            "C": 2,
+            "H": 3,
+            "O": 2
+        },
+        "notes": "Very common modulator. Intermediate stability."
+    },
+    "propionic_acid": {
+        "formula_acid": "C2H5CO2H",
+        "formula_anion": "C2H5CO2⁻",
+        "MW_acid": 74.079,
+        "MW_anion": 73.071,
+        "charge": -1,
+        "bp_C": 141.2,
+        "full_name": "propionic acid / propanoate",
+        "atoms_anion": {
+            "C": 3,
+            "H": 5,
+            "O": 2
+        },
+        "notes": "Less common. Used in some UiO-66 syntheses."
+    },
+    "benzoic_acid": {
+        "formula_acid": "C6H5CO2H",
+        "formula_anion": "C6H5CO2⁻",
+        "MW_acid": 122.122,
+        "MW_anion": 121.114,
+        "charge": -1,
+        "bp_C": 249.2,
+        "full_name": "benzoic acid / benzoate",
+        "atoms_anion": {
+            "C": 7,
+            "H": 5,
+            "O": 2
+        },
+        "notes": "HIGH bp — NOT fully removed at 400°C. Causes M-400 method failure. Use M-200 + NMR."
+    },
+    "TFA": {
+        "formula_acid": "CF3CO2H",
+        "formula_anion": "CF3CO2⁻",
+        "MW_acid": 114.023,
+        "MW_anion": 113.015,
+        "charge": -1,
+        "bp_C": 72.4,
+        "full_name": "trifluoroacetic acid / trifluoroacetate",
+        "atoms_anion": {
+            "C": 2,
+            "F": 3,
+            "O": 2
+        },
+        "notes": "Strong acid (low pKa). Promotes high defect density. Low bp but strong coordination."
+    },
+    "HCl": {
+        "formula_acid": "HCl",
+        "formula_anion": "Cl⁻",
+        "MW_acid": 36.461,
+        "MW_anion": 35.453,
+        "charge": -1,
+        "bp_C": -85.1,
+        "full_name": "hydrochloric acid / chloride",
+        "atoms_anion": {},
+        "notes": "Not an organic modulator — Cl⁻ is an inorganic compensator. Invisible to standard TGA and NMR."
+    },
+    "nitric_acid": {
+        "formula_acid": "HNO3",
+        "formula_anion": "NO3⁻",
+        "MW_acid": 63.013,
+        "MW_anion": 62.005,
+        "charge": -1,
+        "bp_C": 83.0,
+        "full_name": "nitric acid / nitrate",
+        "atoms_anion": {
+            "N": 1,
+            "O": 3
+        },
+        "notes": "From metal nitrate precursors. Residual NO3⁻ adds hidden mass. Detectable by UV-Vis."
+    }
+}

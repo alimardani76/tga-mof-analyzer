@@ -1,0 +1,160 @@
+﻿{
+    "water": {
+        "formula": "H2O",
+        "MW": 18.015,
+        "bp_C": 100.0,
+        "mol_vol_cm3": 18.0,
+        "full_name": "water",
+        "atoms": {
+            "H": 2,
+            "O": 1
+        },
+        "notes": "Ubiquitous. Physisorbed water leaves 25-120°C. Chemisorbed (on open metal sites) leaves 120-250°C."
+    },
+    "DMF": {
+        "formula": "C3H7NO",
+        "MW": 73.094,
+        "bp_C": 153.0,
+        "mol_vol_cm3": 77.4,
+        "full_name": "N,N-dimethylformamide",
+        "atoms": {
+            "C": 3,
+            "H": 7,
+            "N": 1,
+            "O": 1
+        },
+        "notes": "Most common MOF synthesis solvent. Strongly retained in pores. Decomposes ~300°C if trapped."
+    },
+    "DEF": {
+        "formula": "C5H11NO",
+        "MW": 101.147,
+        "bp_C": 177.0,
+        "mol_vol_cm3": 130.0,
+        "full_name": "N,N-diethylformamide",
+        "atoms": {
+            "C": 5,
+            "H": 11,
+            "N": 1,
+            "O": 1
+        },
+        "notes": "Alternative to DMF. Higher bp, bulkier molecule."
+    },
+    "MeOH": {
+        "formula": "CH3OH",
+        "MW": 32.042,
+        "bp_C": 64.7,
+        "mol_vol_cm3": 40.7,
+        "full_name": "methanol",
+        "atoms": {
+            "C": 1,
+            "H": 4,
+            "O": 1
+        },
+        "notes": "Common solvent exchange medium for activation."
+    },
+    "EtOH": {
+        "formula": "C2H5OH",
+        "MW": 46.068,
+        "bp_C": 78.4,
+        "mol_vol_cm3": 58.7,
+        "full_name": "ethanol",
+        "atoms": {
+            "C": 2,
+            "H": 6,
+            "O": 1
+        },
+        "notes": "Common washing and exchange solvent."
+    },
+    "acetone": {
+        "formula": "C3H6O",
+        "MW": 58.079,
+        "bp_C": 56.1,
+        "mol_vol_cm3": 74.0,
+        "full_name": "acetone",
+        "atoms": {
+            "C": 3,
+            "H": 6,
+            "O": 1
+        },
+        "notes": "Used for solvent exchange. Low bp — easily removed."
+    },
+    "THF": {
+        "formula": "C4H8O",
+        "MW": 72.106,
+        "bp_C": 66.0,
+        "mol_vol_cm3": 81.7,
+        "full_name": "tetrahydrofuran",
+        "atoms": {
+            "C": 4,
+            "H": 8,
+            "O": 1
+        },
+        "notes": "Occasionally used in MOF synthesis or post-synthetic modification."
+    },
+    "DCM": {
+        "formula": "CH2Cl2",
+        "MW": 84.933,
+        "bp_C": 39.6,
+        "mol_vol_cm3": 63.9,
+        "full_name": "dichloromethane",
+        "atoms": {
+            "C": 1,
+            "H": 2,
+            "Cl": 2
+        },
+        "notes": "Low bp — easily removed. Used for solvent exchange in some protocols."
+    },
+    "DMSO": {
+        "formula": "C2H6OS",
+        "MW": 78.133,
+        "bp_C": 189.0,
+        "mol_vol_cm3": 71.3,
+        "full_name": "dimethyl sulfoxide",
+        "atoms": {
+            "C": 2,
+            "H": 6,
+            "O": 1,
+            "S": 1
+        },
+        "notes": "High bp. Can be difficult to fully remove from MOF pores."
+    },
+    "chloroform": {
+        "formula": "CHCl3",
+        "MW": 119.378,
+        "bp_C": 61.2,
+        "mol_vol_cm3": 80.7,
+        "full_name": "chloroform",
+        "atoms": {
+            "C": 1,
+            "H": 1,
+            "Cl": 3
+        },
+        "notes": "Low bp. Occasionally used for solvent exchange."
+    },
+    "toluene": {
+        "formula": "C7H8",
+        "MW": 92.138,
+        "bp_C": 110.6,
+        "mol_vol_cm3": 106.9,
+        "full_name": "toluene",
+        "atoms": {
+            "C": 7,
+            "H": 8
+        },
+        "notes": "Used in some MOF syntheses. Moderate bp."
+    },
+    "DMA": {
+        "formula": "C4H9NO",
+        "MW": 87.120,
+        "bp_C": 165.0,
+        "mol_vol_cm3": 92.5,
+        "full_name": "N,N-dimethylacetamide",
+        "atoms": {
+            "C": 4,
+            "H": 9,
+            "N": 1,
+            "O": 1
+        },
+        "notes": "Alternative to DMF. Similar retention behavior."
+    }
+}

@@ -1,0 +1,93 @@
+﻿{
+    "Zr": {
+        "formula": "ZrO2",
+        "M_per_metal": 123.218,
+        "M_metal": 91.224,
+        "crystal_system": "monoclinic",
+        "notes": "Standard residue for all Zr-MOFs. Verify by XRD if possible."
+    },
+    "Zn": {
+        "formula": "ZnO",
+        "M_per_metal": 81.379,
+        "M_metal": 65.38,
+        "crystal_system": "wurtzite",
+        "notes": "Stable in air. Caution: Zn volatilizes above ~900°C under N2."
+    },
+    "Cu": {
+        "formula": "CuO",
+        "M_per_metal": 79.545,
+        "M_metal": 63.546,
+        "crystal_system": "monoclinic",
+        "notes": "Tenorite. Cu2O may form under reducing conditions."
+    },
+    "Fe": {
+        "formula": "Fe2O3",
+        "M_per_metal": 79.845,
+        "M_metal": 55.845,
+        "crystal_system": "rhombohedral",
+        "notes": "Hematite. CAUTION: Fe2+ → Fe3+ oxidation causes mass GAIN during TGA in air."
+    },
+    "Al": {
+        "formula": "Al2O3",
+        "M_per_metal": 50.982,
+        "M_metal": 26.982,
+        "crystal_system": "trigonal",
+        "notes": "Corundum. Very stable residue."
+    },
+    "Ti": {
+        "formula": "TiO2",
+        "M_per_metal": 79.866,
+        "M_metal": 47.867,
+        "crystal_system": "tetragonal",
+        "notes": "Anatase or rutile depending on temperature."
+    },
+    "Hf": {
+        "formula": "HfO2",
+        "M_per_metal": 210.489,
+        "M_metal": 178.49,
+        "crystal_system": "monoclinic",
+        "notes": "Analogous to ZrO2. Used in UiO-66(Hf) variants."
+    },
+    "Cr": {
+        "formula": "Cr2O3",
+        "M_per_metal": 75.995,
+        "M_metal": 51.996,
+        "crystal_system": "trigonal",
+        "notes": "Eskolaite. Stable in air."
+    },
+    "Co": {
+        "formula": "Co3O4",
+        "M_per_metal": 80.258,
+        "M_metal": 58.933,
+        "crystal_system": "cubic spinel",
+        "notes": "Spinel phase. May partially reduce to CoO under certain conditions."
+    },
+    "Ni": {
+        "formula": "NiO",
+        "M_per_metal": 74.692,
+        "M_metal": 58.693,
+        "crystal_system": "cubic",
+        "notes": "Bunsenite. Stable residue in air."
+    },
+    "Ce": {
+        "formula": "CeO2",
+        "M_per_metal": 172.115,
+        "M_metal": 140.116,
+        "crystal_system": "cubic fluorite",
+        "notes": "Ceria. Used in Ce-UiO-66 and related MOFs."
+    },
+    "Mg": {
+        "formula": "MgO",
+        "M_per_metal": 40.304,
+        "M_metal": 24.305,
+        "crystal_system": "cubic",
+        "notes": "Periclase. Hygroscopic — may absorb moisture after TGA."
+    },
+    "Mn": {
+        "formula": "Mn2O3",
+        "M_per_metal": 78.937,
+        "M_metal": 54.938,
+        "crystal_system": "orthorhombic",
+        "notes": "Bixbyite. Multiple Mn oxides possible depending on atmosphere."
+    }
+}

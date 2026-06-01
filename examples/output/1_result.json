@@ -1,0 +1,58 @@
+{
+  "case_id": "1",
+  "status": "COMPLETE",
+  "validation": {
+    "is_valid": true,
+    "errors": [],
+    "warnings": []
+  },
+  "quality": {
+    "noise_pct": 0.151,
+    "has_artifact": false,
+    "sigma_mass_pct": 0.151
+  },
+  "module_1": {
+    "t_onset_tangent": 396.58,
+    "stability_window": [
+      170.0,
+      396.6
+    ],
+    "n_events": 3,
+    "residue_pct": 32.1
+  },
+  "module_2": {
+    "windows": [
+      {
+        "name": "RT-120\u00b0C",
+        "loss_pct": 6.766
+      },
+      {
+        "name": "120-250\u00b0C",
+        "loss_pct": 3.6
+      },
+      {
+        "name": "250-400\u00b0C",
+        "loss_pct": 33.956
+      },
+      {
+        "name": "400-600\u00b0C",
+        "loss_pct": 23.433
+      },
+      {
+        "name": "600-end",
+        "loss_pct": 0.147
+      }
+    ],
+    "total_loss_pct": 67.902
+  },
+  "input_config": {
+    "tga_csv": "examples/sample_tga.csv",
+    "case_id": "1",
+    "atmosphere": "air"
+  },
+  "_metadata": {
+    "toolkit": "TGA-MOF-Analyzer",
+    "version": "0.3",
+    "generated": "2026-06-01T18:58:56.870318"
+  }
+}

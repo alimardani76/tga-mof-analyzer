@@ -1,0 +1,30 @@
+=================================================================
+TGA-MOF-Analyzer — Analysis Report
+=================================================================
+Case: sample_UiO66
+Generated: 2026-06-01 18:58:00
+
+DATA QUALITY:
+  Noise: 0.1510 wt%
+  Artifact: no
+
+THERMAL STABILITY:
+  T_onset (tangent): 396.58 °C
+  Events: 3
+  Mass balance: ?%
+
+RESIDUE ANALYSIS:
+  Predicted: 44.43%
+  Observed: 32.1%
+  Δ: -12.33 pp
+  
+
+-----------------------------------------------------------------
+SUGGESTED WORDING (copy-paste for manuscript):
+-----------------------------------------------------------------
+
+Thermogravimetric analysis (TGA) was performed under air atmosphere at a heating rate of 10 °C/min. Data were analyzed using TGA-MOF-Analyzer v0.3, an open-source toolkit for automated TGA interpretation of metal–organic frameworks. Mass-loss events were detected using valley-to-valley segmentation of the derivative thermogravimetric (DTG) curve, ensuring 100% mass balance across all detected events.
+
+The decomposition onset temperature was determined to be 396.6 °C by the tangent intersection method. The observed TGA residue (32.10 wt%) was compared to the predicted 6ZrO2 residue (44.43 wt%) calculated from the ideal guest-free framework formula (MW = 1664.06 g/mol). The deficit of 12.3 percentage points indicates excess organic content relative to the ideal stoichiometry, consistent with residual guests, modulator, or missing-linker defects.
+
+=================================================================

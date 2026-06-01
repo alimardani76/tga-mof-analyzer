@@ -1,0 +1,38 @@
+{
+  "case_id": "blank_02_Ca_Alg",
+  "sample_name": "Ca_Alg",
+  "is_mof_or_mof_composite": false,
+  "recommended_code_mode": "blank_control_non_mof",
+  "case_notes": "Calcium alginate blank; use for binder/additive burnoff correction only.",
+  "material_class": "blank_control_non_mof",
+  "source_file": "2_ALG_TGA.csv",
+  "source_dataset": "Crickmore & Bradshaw, University of Southampton dataset supporting PhD thesis: Metal-organic framework composites for nuclear waste clean-up",
+  "source_dataset_doi": "10.5258/SOTON/D2004",
+  "source_url": "https://eprints.soton.ac.uk/481226/",
+  "license": "Creative Commons Attribution (as stated for dataset files on repository page)",
+  "temperature_range_C": [
+    26.377,
+    898.377
+  ],
+  "mass_percent_final": 8.88767,
+  "source_axis_note": "Source column label says mass loss (%), but values start at 100; stored here as normalized mass remaining percent.",
+  "formula_or_formula_note": "Blank/binder, not MOF",
+  "candidate_guests_default": [
+    "H2O",
+    "DMF",
+    "EtOH"
+  ],
+  "mandatory_user_fields_for_quantitative_stoichiometry": [
+    "guest-free framework formula or framework molar mass",
+    "temperature window(s) for assigned guest/solvent loss",
+    "candidate guest identities and molar masses",
+    "atmosphere and heating rate, if comparing decomposition temperature",
+    "blank/support fraction if composite/binder mode is used"
+  ],
+  "quick_metrics": {
+    "mass_loss_120_250_C_pct_points": 18.89610648,
+    "mass_loss_250_400_C_pct_points": 31.205518589999997,
+    "mass_loss_400_600_C_pct_points": 20.250143080000004,
+    "mass_loss_600_700_C_pct_points": 9.747242189999998
+  }
+}

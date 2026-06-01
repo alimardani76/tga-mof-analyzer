@@ -1,0 +1,149 @@
+﻿{
+    "BDC": {
+        "formula": "C8H4O4",
+        "MW": 164.116,
+        "charge": -2,
+        "full_name": "1,4-benzenedicarboxylate (terephthalate)",
+        "n_carboxylate": 2,
+        "atoms": {
+            "C": 8,
+            "H": 4,
+            "O": 4
+        },
+        "used_in": [ "UiO-66", "MOF-5", "MIL-53", "MIL-125", "MIL-101" ]
+    },
+    "NH2-BDC": {
+        "formula": "C8H5NO4",
+        "MW": 179.130,
+        "charge": -2,
+        "full_name": "2-amino-1,4-benzenedicarboxylate",
+        "n_carboxylate": 2,
+        "atoms": {
+            "C": 8,
+            "H": 5,
+            "N": 1,
+            "O": 4
+        },
+        "used_in": [ "UiO-66-NH2", "MIL-53-NH2", "MIL-125-NH2" ]
+    },
+    "BTC": {
+        "formula": "C9H3O6",
+        "MW": 208.124,
+        "charge": -3,
+        "full_name": "1,3,5-benzenetricarboxylate (trimesate)",
+        "n_carboxylate": 3,
+        "atoms": {
+            "C": 9,
+            "H": 3,
+            "O": 6
+        },
+        "used_in": [ "MOF-808", "HKUST-1", "MIL-100" ]
+    },
+    "BPDC": {
+        "formula": "C14H8O4",
+        "MW": 240.212,
+        "charge": -2,
+        "full_name": "biphenyl-4,4'-dicarboxylate",
+        "n_carboxylate": 2,
+        "atoms": {
+            "C": 14,
+            "H": 8,
+            "O": 4
+        },
+        "used_in": [ "UiO-67" ]
+    },
+    "NDC": {
+        "formula": "C12H6O4",
+        "MW": 214.174,
+        "charge": -2,
+        "full_name": "2,6-naphthalenedicarboxylate",
+        "n_carboxylate": 2,
+        "atoms": {
+            "C": 12,
+            "H": 6,
+            "O": 4
+        },
+        "used_in": [ "DUT-52" ]
+    },
+    "DOBDC": {
+        "formula": "C8H2O6",
+        "MW": 194.100,
+        "charge": -4,
+        "full_name": "2,5-dioxido-1,4-benzenedicarboxylate",
+        "n_carboxylate": 2,
+        "atoms": {
+            "C": 8,
+            "H": 2,
+            "O": 6
+        },
+        "used_in": [ "MOF-74", "CPO-27" ]
+    },
+    "fumarate": {
+        "formula": "C4H2O4",
+        "MW": 114.056,
+        "charge": -2,
+        "full_name": "fumarate (trans-butenedioate)",
+        "n_carboxylate": 2,
+        "atoms": {
+            "C": 4,
+            "H": 2,
+            "O": 4
+        },
+        "used_in": [ "MOF-801", "Zr-fumarate" ]
+    },
+    "2-mIm": {
+        "formula": "C4H5N2",
+        "MW": 81.076,
+        "charge": -1,
+        "full_name": "2-methylimidazolate",
+        "n_carboxylate": 0,
+        "atoms": {
+            "C": 4,
+            "H": 5,
+            "N": 2,
+            "O": 0
+        },
+        "used_in": [ "ZIF-8" ]
+    },
+    "Im": {
+        "formula": "C3H3N2",
+        "MW": 67.049,
+        "charge": -1,
+        "full_name": "imidazolate",
+        "n_carboxylate": 0,
+        "atoms": {
+            "C": 3,
+            "H": 3,
+            "N": 2,
+            "O": 0
+        },
+        "used_in": [ "ZIF-4", "ZIF-62" ]
+    },
+    "TBAPy": {
+        "formula": "C28H14O8",
+        "MW": 482.400,
+        "charge": -4,
+        "full_name": "1,3,6,8-tetrakis(p-benzoate)pyrene",
+        "n_carboxylate": 4,
+        "atoms": {
+            "C": 28,
+            "H": 14,
+            "O": 8
+        },
+        "used_in": [ "NU-1000" ]
+    },
+    "TCPP": {
+        "formula": "C48H26N4O8",
+        "MW": 790.730,
+        "charge": -4,
+        "full_name": "tetrakis(4-carboxyphenyl)porphyrin",
+        "n_carboxylate": 4,
+        "atoms": {
+            "C": 48,
+            "H": 26,
+            "N": 4,
+            "O": 8
+        },
+        "used_in": [ "PCN-222", "MOF-525" ]
+    }
+}

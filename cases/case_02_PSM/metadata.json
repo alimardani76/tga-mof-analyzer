@@ -1,0 +1,38 @@
+{
+  "case_id": "case_02_PSM",
+  "sample_name": "PSM",
+  "is_mof_or_mof_composite": true,
+  "recommended_code_mode": "postsynthetic_modification_conversion",
+  "case_notes": "Post-synthetically modified UiO-66-NH2 material; compare with parent UiO-66-NH2.",
+  "material_class": "MOF_or_MOF_composite",
+  "source_file": "2_PSM_TGA.csv",
+  "source_dataset": "Crickmore & Bradshaw, University of Southampton dataset supporting PhD thesis: Metal-organic framework composites for nuclear waste clean-up",
+  "source_dataset_doi": "10.5258/SOTON/D2004",
+  "source_url": "https://eprints.soton.ac.uk/481226/",
+  "license": "Creative Commons Attribution (as stated for dataset files on repository page)",
+  "temperature_range_C": [
+    25.467,
+    898.467
+  ],
+  "mass_percent_final": 38.95293,
+  "source_axis_note": "Source column label says mass loss (%), but values start at 100; stored here as normalized mass remaining percent.",
+  "formula_or_formula_note": "Unknown/modified UiO-66-NH2 derivative; enter exact post-synthetic formula if known",
+  "candidate_guests_default": [
+    "H2O",
+    "DMF",
+    "EtOH"
+  ],
+  "mandatory_user_fields_for_quantitative_stoichiometry": [
+    "guest-free framework formula or framework molar mass",
+    "temperature window(s) for assigned guest/solvent loss",
+    "candidate guest identities and molar masses",
+    "atmosphere and heating rate, if comparing decomposition temperature",
+    "blank/support fraction if composite/binder mode is used"
+  ],
+  "quick_metrics": {
+    "mass_loss_120_250_C_pct_points": 6.373627439999993,
+    "mass_loss_250_400_C_pct_points": 16.81063436000001,
+    "mass_loss_400_600_C_pct_points": 23.988662789999992,
+    "mass_loss_600_700_C_pct_points": 3.8105741199999983
+  }
+}

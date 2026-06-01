@@ -1,0 +1,17 @@
+{
+  "analysis_name": "case_12_Zn-MOF-1",
+  "mode": "as_synth_guest_content__zn_mof_thermal_decomposition",
+  "material_class": "MOF_or_MOF_composite",
+  "tga_csv": "tga_curve_standardized.csv",
+  "formula": "Zn-MOF-1; exact formula not stored in dataset filename; add from thesis/source before stoichiometric calculation",
+  "candidate_guests": [
+    "H2O",
+    "DMF",
+    "EtOH"
+  ],
+  "atmosphere": "unknown_from_source_file",
+  "heating_rate_C_min": "unknown_from_source_file",
+  "temperature_column": "temperature_C",
+  "mass_column": "mass_percent",
+  "notes": "Relative path assumes running from this case folder. Fill missing formula/metadata before publication-quality stoichiometric claims."
+}

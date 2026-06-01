@@ -1,0 +1,68 @@
+{
+  "case_id": "sample_UiO66",
+  "status": "COMPLETE",
+  "validation": {
+    "is_valid": true,
+    "errors": [],
+    "warnings": []
+  },
+  "quality": {
+    "noise_pct": 0.151,
+    "has_artifact": false,
+    "sigma_mass_pct": 0.151
+  },
+  "module_1": {
+    "t_onset_tangent": 396.58,
+    "stability_window": [
+      170.0,
+      396.6
+    ],
+    "n_events": 3,
+    "residue_pct": 32.1
+  },
+  "module_2": {
+    "windows": [
+      {
+        "name": "RT-120\u00b0C",
+        "loss_pct": 6.766
+      },
+      {
+        "name": "120-250\u00b0C",
+        "loss_pct": 3.6
+      },
+      {
+        "name": "250-400\u00b0C",
+        "loss_pct": 33.956
+      },
+      {
+        "name": "400-600\u00b0C",
+        "loss_pct": 23.433
+      },
+      {
+        "name": "600-end",
+        "loss_pct": 0.147
+      }
+    ],
+    "total_loss_pct": 67.902
+  },
+  "residue_analysis": {
+    "formula": "Zr6O4(OH)4(BDC)6",
+    "framework_mass": 1664.064,
+    "predicted_residue_pct": 44.43,
+    "observed_residue_pct": 32.1,
+    "delta_pct": -12.33,
+    "oxide_formula": "6ZrO2"
+  },
+  "input_config": {
+    "case_id": "sample_UiO66",
+    "tga_csv": "examples/sample_tga.csv",
+    "formula": "Zr6O4(OH)4(BDC)6",
+    "atmosphere": "air",
+    "heating_rate": 10
+  },
+  "_metadata": {
+    "toolkit": "TGA-MOF-Analyzer",
+    "version": "0.3",
+    "generated": "2026-06-01T18:58:00.913362"
+  }
+}

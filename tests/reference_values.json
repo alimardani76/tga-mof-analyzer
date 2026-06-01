@@ -1,0 +1,56 @@
+{
+  "_description": "Reference values from 14-case validation. DO NOT CHANGE unless scientifically justified.",
+  "_source": "Crickmore & Bradshaw, DOI: 10.5258/SOTON/D2004",
+  "_toolkit_version": "0.3",
+
+  "formulas": {
+    "uio66_nh2_hydroxylated": {
+      "formula": "Zr6O4(OH)4(NH2BDC)6",
+      "mw": 1754.154,
+      "predicted_residue_pct_guest_free": 42.15,
+      "oxide": "6ZrO2"
+    }
+  },
+
+  "cases": {
+    "case_01": {
+      "residue_pct": 32.88,
+      "total_loss_pct": 67.12,
+      "mass_balance_deviation": 0.00,
+      "decomp_peak_range_C": [430, 460],
+      "n_points": 874
+    },
+    "case_03": {
+      "residue_pct": 32.73,
+      "total_loss_pct": 67.27,
+      "mass_balance_deviation": 0.00
+    },
+    "case_09": {
+      "residue_pct": 29.64,
+      "total_loss_pct": 70.36,
+      "mass_balance_deviation": 0.00
+    }
+  },
+
+  "composites": {
+    "ffp_series_mof_pct": {
+      "5_cycles": 10.43,
+      "10_cycles": 14.59,
+      "15_cycles": 16.53,
+      "20_cycles": 27.75,
+      "trend": "monotonically_increasing"
+    },
+    "alginate": {
+      "nh2_at_alg": 64.01,
+      "nh3_at_alg": 33.50
+    }
+  },
+
+  "guest_molar_masses": {
+    "H2O": 18.015,
+    "DMF": 73.094,
+    "EtOH": 46.068,
+    "NH2-BDC": 179.131,
+    "ZrO2": 123.222
+  }
+}

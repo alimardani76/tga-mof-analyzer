@@ -1,0 +1,17 @@
+{
+  "analysis_name": "case_06_UiO66NH2_FFP_15cycle",
+  "mode": "mof_composite_or_membrane_loading__cycling_stability",
+  "material_class": "MOF_or_MOF_composite",
+  "tga_csv": "tga_curve_standardized.csv",
+  "formula": "Composite: UiO-66-NH2 + FFP support; formula not single-phase",
+  "candidate_guests": [
+    "H2O",
+    "DMF",
+    "EtOH"
+  ],
+  "atmosphere": "unknown_from_source_file",
+  "heating_rate_C_min": "unknown_from_source_file",
+  "temperature_column": "temperature_C",
+  "mass_column": "mass_percent",
+  "notes": "Relative path assumes running from this case folder. Fill missing formula/metadata before publication-quality stoichiometric claims."
+}

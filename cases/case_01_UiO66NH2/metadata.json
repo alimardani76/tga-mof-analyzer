@@ -1,0 +1,38 @@
+{
+  "case_id": "case_01_UiO66NH2",
+  "sample_name": "UiO66NH2",
+  "is_mof_or_mof_composite": true,
+  "recommended_code_mode": "as_synth_or_activated_powder_guest_loss_and_decomposition",
+  "case_notes": "UiO-66-NH2 powder/reference MOF curve; use for guest loss, activation window, decomposition, residue sanity check.",
+  "material_class": "MOF_or_MOF_composite",
+  "source_file": "2_PSM_TGA.csv",
+  "source_dataset": "Crickmore & Bradshaw, University of Southampton dataset supporting PhD thesis: Metal-organic framework composites for nuclear waste clean-up",
+  "source_dataset_doi": "10.5258/SOTON/D2004",
+  "source_url": "https://eprints.soton.ac.uk/481226/",
+  "license": "Creative Commons Attribution (as stated for dataset files on repository page)",
+  "temperature_range_C": [
+    25.379,
+    898.379
+  ],
+  "mass_percent_final": 32.87773,
+  "source_axis_note": "Source column label says mass loss (%), but values start at 100; stored here as normalized mass remaining percent.",
+  "formula_or_formula_note": "Zr6O4(OH)4(NH2-BDC)6  # approximate guest-free UiO-66-NH2 node formula; verify paper-specific convention",
+  "candidate_guests_default": [
+    "H2O",
+    "DMF",
+    "EtOH"
+  ],
+  "mandatory_user_fields_for_quantitative_stoichiometry": [
+    "guest-free framework formula or framework molar mass",
+    "temperature window(s) for assigned guest/solvent loss",
+    "candidate guest identities and molar masses",
+    "atmosphere and heating rate, if comparing decomposition temperature",
+    "blank/support fraction if composite/binder mode is used"
+  ],
+  "quick_metrics": {
+    "mass_loss_120_250_C_pct_points": 7.957846589999988,
+    "mass_loss_250_400_C_pct_points": 17.571198900000006,
+    "mass_loss_400_600_C_pct_points": 24.45618126,
+    "mass_loss_600_700_C_pct_points": 3.5093548800000036
+  }
+}

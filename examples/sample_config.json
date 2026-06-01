@@ -1,0 +1,8 @@
+
+{
+  "case_id": "sample_UiO66",
+  "tga_csv": "examples/sample_tga.csv",
+  "formula": "Zr6O4(OH)4(BDC)6",
+  "atmosphere": "air",
+  "heating_rate": 10
+}

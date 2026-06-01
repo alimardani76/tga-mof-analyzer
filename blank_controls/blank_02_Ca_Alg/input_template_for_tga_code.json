@@ -1,0 +1,17 @@
+{
+  "analysis_name": "blank_02_Ca_Alg",
+  "mode": "blank_control_non_mof",
+  "material_class": "blank_control_non_mof",
+  "tga_csv": "tga_curve_standardized.csv",
+  "formula": "Blank/binder, not MOF",
+  "candidate_guests": [
+    "H2O",
+    "DMF",
+    "EtOH"
+  ],
+  "atmosphere": "unknown_from_source_file",
+  "heating_rate_C_min": "unknown_from_source_file",
+  "temperature_column": "temperature_C",
+  "mass_column": "mass_percent",
+  "notes": "Relative path assumes running from this case folder. Fill missing formula/metadata before publication-quality stoichiometric claims."
+}

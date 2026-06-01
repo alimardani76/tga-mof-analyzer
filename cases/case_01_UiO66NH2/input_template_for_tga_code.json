@@ -1,0 +1,17 @@
+{
+  "analysis_name": "case_01_UiO66NH2",
+  "mode": "as_synth_or_activated_powder_guest_loss_and_decomposition",
+  "material_class": "MOF_or_MOF_composite",
+  "tga_csv": "tga_curve_standardized.csv",
+  "formula": "Zr6O4(OH)4(NH2-BDC)6  # approximate guest-free UiO-66-NH2 node formula; verify paper-specific convention",
+  "candidate_guests": [
+    "H2O",
+    "DMF",
+    "EtOH"
+  ],
+  "atmosphere": "unknown_from_source_file",
+  "heating_rate_C_min": "unknown_from_source_file",
+  "temperature_column": "temperature_C",
+  "mass_column": "mass_percent",
+  "notes": "Relative path assumes running from this case folder. Fill missing formula/metadata before publication-quality stoichiometric claims."
+}

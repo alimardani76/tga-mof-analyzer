@@ -1,0 +1,38 @@
+{
+  "case_id": "case_08_UiO66NH3_FFP",
+  "sample_name": "UiO66NH3+@FFP",
+  "is_mof_or_mof_composite": true,
+  "recommended_code_mode": "mof_composite_or_membrane_loading__protonated_or_ion_exchange_variant",
+  "case_notes": "Protonated/functionalized UiO-66 composite; use with blank-control/composite mode.",
+  "material_class": "MOF_or_MOF_composite",
+  "source_file": "2_FFP_TGA.csv",
+  "source_dataset": "Crickmore & Bradshaw, University of Southampton dataset supporting PhD thesis: Metal-organic framework composites for nuclear waste clean-up",
+  "source_dataset_doi": "10.5258/SOTON/D2004",
+  "source_url": "https://eprints.soton.ac.uk/481226/",
+  "license": "Creative Commons Attribution (as stated for dataset files on repository page)",
+  "temperature_range_C": [
+    25.293,
+    899.293
+  ],
+  "mass_percent_final": 1.50801,
+  "source_axis_note": "Source column label says mass loss (%), but values start at 100; stored here as normalized mass remaining percent.",
+  "formula_or_formula_note": "Composite/protonated UiO-66-NH2 + FFP support; formula not single-phase",
+  "candidate_guests_default": [
+    "H2O",
+    "DMF",
+    "EtOH"
+  ],
+  "mandatory_user_fields_for_quantitative_stoichiometry": [
+    "guest-free framework formula or framework molar mass",
+    "temperature window(s) for assigned guest/solvent loss",
+    "candidate guest identities and molar masses",
+    "atmosphere and heating rate, if comparing decomposition temperature",
+    "blank/support fraction if composite/binder mode is used"
+  ],
+  "quick_metrics": {
+    "mass_loss_120_250_C_pct_points": 0.8739146300000016,
+    "mass_loss_250_400_C_pct_points": 74.68733642,
+    "mass_loss_400_600_C_pct_points": 13.943355570000001,
+    "mass_loss_600_700_C_pct_points": 0.2707497600000002
+  }
+}
